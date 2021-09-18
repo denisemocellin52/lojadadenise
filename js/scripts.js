@@ -43,3 +43,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// * Botão de Cadastrar, recebe a mensagem diz que foi cadastrado tudo ok e mostra a página do site Cadastrado com sucesso * //
+function cadastrar() {
+    location.href="envio.html"
+    var nome = document.getElementById("nome");
+
+    if (nome.value != "") {
+        alert(nome.value + ',' + ' cadastrado!');
+    }
+}
+
+
+

@@ -36,6 +36,7 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
+            <form name="formulario" action="envio.html" id="formulario" onsubmit="cadastrar()"></form>
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="https://scontent.fccm5-1.fna.fbcdn.net/v/t1.6435-9/136381354_3739020172851813_3927153248677322687_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=iCDXfdKP95cAX-LxmwC&_nc_ht=scontent.fccm5-1.fna&oh=b72bc07c1177b48303982e6fdaa2a277&oe=616A6688" alt="..." />
@@ -60,13 +61,13 @@
                 <br>
                 <br>
                 <p>
-                    Cresci em Porto Alegre/RS, sempre gostei muito de Tecnologia então comecei estudar na escola QI curso Técnico em Informática, em 2 anos depois, escolhi a área em Redes de Computadores porque amei de ver "Data Center" esses racks que ficam no ambiente. Entrei a faculdade Unilasalle La Salle e comecei trabalhar na empresa Innova - Petrobras, era meu primeiro emprego de TI, foi um grande desafio e um ano e meio trabalhando suporte técnico aos usuários de hardware e software tratativas de chamados.
-                    Em 4 meses depois, consegui emprego na empresa grande porte HP Hewlett Packard, cargo como Technician V, me desenvolvendo melhor cada vez, prestar em atendimentos tasks (Chamados), foi uma grande experiência e amava o emprego.                
-                    Bem, depois de um ano e meio decidi me mudar para Maceió-AL, conheci o pessoal da Hand Talk, o famoso aplicativo de Libras, fui chamada para entrevista, comecei a trabalhar na empresa, como instrutora de Libras por quase 3 anos, decidi voltar para o sul pois percebi que no nordeste não tem muitas empresas tecnologias que eu queria sempre desenvolver.
-                    Em 2017, finalmente aqui em Florianópolis onde eu sempre sonhei, com toda a minha família que estão morando aqui já faz 6 anos.
-                    Comecei a trabalhar no hospital Baia Sul, como assistente de TI prestar suporte técnico atender os chamados aos usuários na clínica Imagem e no Baia Sul suporte. Em 2018, em busca para conseguir o emprego melhor com a empresa grande porte, na empresa Softplan, no inicio o meu cargo era Técnico em Infraestrutura, depois de um ano e meio ganhei a promoção para o cargo Analista de Aplicação e Infraestrutura, suporte geral administração da Microsoft (SharePoint, PowerBI, Teams), gestão do ambiente virtualização VMware e vcenter, gestão de Antivírus Kaspersky (Instalação, remoção, gerar os relatórios,atualizações, análise, criação de tarefa e política) e também suporte da Firewall/VPN (Plataforma Fortigate), criação de regra política, bloqueio e liberar, análises de logs. Monitorar redes e tráfego VPN.
-                    Neste ano decidi trilhar para outra área de programação, quero mudar, sempre aprender e aprimorar os conhecimentos, meu sonho é criar os aplicativos e jogos :) Atualmente aprendendo várias linguagens e cursando o curso de desenvolvimento Web (Front-End e Back-End).
-                </p>
+                    Cresci em Porto Alegre/RS, sempre gostei muito de Tecnologia então comecei estudar na escola QI curso Técnico em Informática, em 2 anos depois, escolhi a área em Redes de Computadores porque amei de ver "Data Center" esses racks que ficam no ambiente. Entrei a faculdade Unilasalle La Salle e comecei trabalhar na empresa Innova Petrobras que era meu primeiro emprego de TI, foi um grande desafio.
+
+Trabalhei de uma empresa porte grande HP Hewlett Packard, foi uma experiência incrível.               
+Anos depois decidi me mudar para Maceió-AL, conheci o pessoal da Hand Talk, o famoso aplicativo de Libras, como instrutora de Libras por 3 anos, decidi voltar para o Sul para trabalhar com as melhores empresas de tecnologia e realizar os meus objetivos.
+
+Este ano decidi trilhar para área de programação, quero mudar a minha vida, é muito bom sempre para aprender e aprimorar os conhecimentos, o meu sonho é criar os aplicativos e jogos :) 
+Atualmente aprendendo várias linguagens e cursando o curso de desenvolvimento Web (Front-End e Back-End).</p>
                 <br>
                 <br>
                 <div class="divider-custom">
@@ -141,7 +142,6 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">Meu ponto é tornar os meus objetivos de desenvolvimento, aperfeiçoar e mais conhecimentos.
-
                         Tenho 36 anos. Experiência mais de 15 anos na área de Infraestrutura, pós-graduada em Segurança da Informação. Tenho amplo conhecimento em redes, firewall plataformas com a Fortigate e Cisco, Suporte e administração de ambientes Microsoft como Office 365, Azure, Exchange, Teams e Sharepoint.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">Atualmente aprendendo várias linguagens e cursando o curso de desenvolvimento Web (Front-End e Back-End). Paixão de Tecnologia :)</p></div>
                 </div>
@@ -201,10 +201,7 @@
                             <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Formulário foi enviado com sucesso!</div>
-                                    Para ativar o formulário, inscreva-se.
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <div class="fw-bolder">Mensagem foi enviada com sucesso!</div>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -213,7 +210,10 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro, mensagem não enviada!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
+                            <!-- Tela de mensagem enviar -->
+                            <div class="envio">
+                                <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Local</h4>
+                        <h4 class="text-uppercase mb-4">Localização</h4>
                         <p class="lead mb-0">
                             Ingleses, Florianópolis/SC
                         </p>
@@ -236,6 +236,7 @@
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/denisemocellin"><i class="fab fa-fw fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/DeniseMocellin1"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/denise-regert-mocellin-pcd-7b6a2033/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="email" href="mailto:drmocellin52@hotmail.com?Subject=Hello%20again" target="_top"></a>
                     </div>
                 </div>
             </div>
@@ -414,18 +415,14 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4"></p>
                                     <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Fechar
